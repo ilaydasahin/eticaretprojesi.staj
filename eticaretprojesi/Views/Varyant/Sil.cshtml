@@ -1,0 +1,31 @@
+﻿@model eticaretprojesi.Models.Varyant
+
+@{
+    ViewBag.Title = "Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sil</h2>
+
+<div>
+    <h4>Varyant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tanim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tanim)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sİl" class="btn btn-default" /> |
+        </div>
+    }
+</div>

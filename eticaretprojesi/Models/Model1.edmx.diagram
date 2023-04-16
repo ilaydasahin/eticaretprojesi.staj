@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="35a8dd69704749ed8617954c64a6442c" Name="Diagram1">
+        <EntityTypeShape EntityType="eticaretprojesiModel.GizlilikIlkesi" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Hakkimizda" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.IadeKosullari" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.KargoFirmasi" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Kategoriler" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Login" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.MailAbone" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.MailAyarlari" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Musteri" Width="1.5" PointX="10.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.OdemeYontemi" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Ozellik" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Seo" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SepetId" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Siparis" Width="1.5" PointX="12.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SiparisDetay" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SiparisDurumu" Width="1.5" PointX="10.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SiparisGecmisi" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SiteAyarlari" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.SosyalMedya" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.sysdiagrams" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.TeslimatBilgileri" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Urunler" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.UrunVaryant" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.UyeSozlesmesi" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Varyant" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretprojesiModel.Yorumlar" Width="1.5" PointX="12.75" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SiparisDetay_KargoFirmasi" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Ozellik_Kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Urunler_Kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Varyant_Kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_musteri_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_musteri_SepetId" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_musteri_SiparisGecmisi" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Siparis_musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Yorumlar_musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Siparis_OdemeYontemi" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SiparisDetay_OdemeYontemi" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SiparisDetay_Ozellik" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_UrunVaryant_Ozellik" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SepetId_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Siparis_SiparisDetay" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Siparis_SiparisDurumu" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SiparisDetay_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_SiparisDetay_Varyant" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Urunler_TeslimatBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_UrunVaryant_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_Yorumlar_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretprojesiModel.FK_UrunVaryant_Varyant" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

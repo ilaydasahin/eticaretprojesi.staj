@@ -1,0 +1,76 @@
+﻿@model List<eticaretprojesi.Models.SiparisDurumu>
+@{
+    ViewBag.Title = "liste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+
+
+
+</head>
+
+<div class="card-header">
+
+    <a href="/SiparisDurum/EKle"> <button class="btn btn-primary"> Yeni Durum Ekle</button></a>
+</div>
+<div class="container">
+    <div class="table-responsive">
+
+        <table id="Varyant" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Sipariş Durum</th>
+
+
+                    <th>Detay</th>
+                    <th>Güncelle</th>
+
+                    <th>Sil</th>
+
+
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+
+                    <tr>
+
+                        <td>@item.Id</td>
+                        <td>@item.Tanim </td>
+                        <td>@item.Detay </td>
+
+
+
+
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="/SiparisDurum/guncelle/@item.Id"> Güncelle</a>
+
+                        </td>
+
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="/SiparisDurum/sil/@item.Id" onclick="return confirm('Durumu Silmek istıyor musunuz')">Sİl</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Varyant').DataTable();
+    });
+</script>
+

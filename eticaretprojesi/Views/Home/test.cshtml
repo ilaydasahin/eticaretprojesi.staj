@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row p-2 ">
+    <div class="col-md-6  ">
+        <div class="container table-bordered table-light">
+            <br />
+            <br />
+            <form method="post" action="seo">
+
+
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Id</label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <input type="text" disabled="disabled" value="" name="Id" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Site Başlık</label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <input type="text" class="form-control" value="" name="Sitebaslik_Description" placeholder="Site Başlık">
+                        </div>
+                    </div>
+
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-sm-9  offset-md-3">
+                            <button type="button" class="btn btn-primary">İptal</button>
+                            <button type="reset" class="btn btn-primary">Temizle</button>
+                            <button type="submit" class="btn btn-success">Kaydet</button>
+                        </div>
+                    </div>
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+
+

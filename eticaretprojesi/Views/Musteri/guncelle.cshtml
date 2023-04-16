@@ -1,0 +1,59 @@
+﻿@model eticaretprojesi.Models.musteri
+@{
+    ViewBag.Title = "guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12">
+    <div class="container">
+        <div class="x_title">
+            <h2>Ürün Ekle</h2>
+            <form method="post">
+
+
+
+                <div class="form-group">
+                    <label>Adi</label>
+                    <input type="text" name="adi" id="fiyat" value="@Model.adi" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label>Soyadi</label>
+                    <input type="text" name="Soyadi" value="@Model.Soyadi" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label>Eposta</label>
+                    <input type="text" name="Eposta" value="@Model.Eposta" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+                    <label>Doğum Tarihi</label>
+                    <input type="text" name="DogumTArihi" value="@Model.DogumTArihi" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+                    <label>Şifre</label>
+                    <input type="text" name="Sifre" value="@Model.Sifre" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label>Teslimat Adresi</label>
+                    <input type="text" name="TeslimatAdresi" value="@Model.TeslimatAdresi" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label>Fatura Adresi</label>
+                    <input type="text" name="FaturaAdresi" value="@Model.FaturaAdresi" class="form-control" />
+
+                </div>
+                <button type="submit" class="btn btn-primary" id="UrunEkle">Kaydet</button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+

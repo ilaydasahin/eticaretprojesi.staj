@@ -1,0 +1,73 @@
+﻿@model eticaretprojesi.Models.Siparis
+
+@{
+    ViewBag.Title = "sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>sil</h2>
+
+
+<div>
+    <h4>Siparis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SatisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SatisTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KargoTakip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KargoTakip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.musteri.adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.musteri.adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdemeYontemi.Tanim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdemeYontemi.Tanim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiparisDetay.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiparisDetay.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiparisDurumu.Tanim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiparisDurumu.Tanim)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            
+        </div>
+    }
+</div>

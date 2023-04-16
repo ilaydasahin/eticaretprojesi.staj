@@ -1,0 +1,114 @@
+﻿@model List<eticaretprojesi.Models.Urunler>
+@{
+    ViewBag.Title = "liste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+
+
+
+</head>
+<div class="container">
+    <div class="table-responsive">
+
+        <table id="Urunler" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Resim</th>
+                    <th>Adi</th>
+                    <th>Fiyat</th>
+                    <th>Açıklama</th>
+                    <th>Stok Kodu</th>
+                    <th>Adet</th>
+                    <th>Kategori</th>
+                    <th>Ekleme Tarihi</th>
+
+
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+
+
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+
+                    <tr>
+
+                       <td>@item.Id</td>
+                        @if (item.Resim  !=null && item.Resim !="")
+                        {
+                            if (item.Resim.Split(';')[0].Length>0)
+                            {
+                                <td><img src="http://localhost:62082/\content\images\@item.Resim.Split(';')[0]" style="width:100px;height:80px" /></td>
+                            }
+                        }
+
+
+                        <td>@item.Adi</td>
+                        <td>@item.fiyat</td>
+                        <td>
+
+
+                            <!-- Button trigger modal -->
+                            <button type="button" data-placement="top" data-toggle="modal" title="Görüntüle" class="btn btn-primary btn-xs" style="font-size:x-small" data-target="#exampleModalCenter">
+                                Açıklama Oku
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Açıklama</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @Html.Raw(item.Acıklama)
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>@item.Stok_Kodu</td>
+                        <td>@item.Adet</td>
+                        <td>@item.Kategoriler.Tanim</td>
+                        <td>@item.Ekleme_Tarih.ToString()</td>
+
+                        <td>
+                            <a href="/Urunler/guncelle/@item.Id"  class="btn btn-primary btn-xs" style="font-size:x-small">Güncelle</a>
+
+                        </td>
+
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="/Urunler/Sil/@item.Id" onclick="return confirm('Urun Silmek İstediğinize Eminmisiniz?')">Sİl</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Urunler').DataTable();
+    });
+</script>
